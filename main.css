@@ -1,0 +1,144 @@
+:root {
+  --mainBackground: #0d0d0d; 
+  --mainText: #e0e0e0;
+  --mainAccent: #1e90ff; 
+  --secondaryAccent: #b0b0b0; 
+  --buttonActive: #00bfff;
+}
+
+body {
+  background: var(--mainBackground);
+  color: var(--mainText);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+  line-height: 1.6;
+}
+
+.question-card, .feedback, textarea {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
+}
+
+.question-card, textarea {
+  border-radius: 0.5rem; 
+  border: 1px solid var(--secondaryAccent); 
+}
+
+.show-btn, .submitBtn, .edit-flashcard, .delete-flashcard {
+  padding: 0.6rem 1.2rem; 
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease; 
+  border: 1px solid var(--mainAccent); 
+}
+
+.show-btn {
+  color: var(--mainAccent);
+  background: transparent;
+}
+
+.show-btn:hover {
+  background: var(--mainAccent);
+  color: var(--mainBackground);
+}
+
+.question-card {
+  display: none;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1); 
+  border-color: var(--mainAccent);
+}
+
+.feedback {
+  display: none;
+}
+
+textarea {
+  border-radius: 0.5rem;
+  border-color: var(--secondaryAccent);
+  background: rgba(135, 80, 80, 0.2); 
+  color: var(--mainText);
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--mainAccent);
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: var(--buttonActive);
+}
+
+.submitBtn {
+  border-color: var(--mainAccent);
+  color: var(--mainBackground);
+  background: var(--mainAccent);
+}
+
+.submitBtn:hover {
+  background: var(--buttonActive);
+  color: var(--mainBackground);
+}
+
+.edit-flashcard {
+  border-color: var(--mainAccent);
+  color: var(--mainAccent);
+  background: transparent;
+}
+
+.edit-flashcard:hover {
+  background: var(--mainAccent);
+  color: var(--mainBackground);
+}
+
+.delete-flashcard {
+  border-color: var(--mainAccent);
+  color: var(--mainAccent);
+  background: transparent;
+}
+
+.delete-flashcard:hover {
+  background: var(--buttonActive);
+  color: var(--mainBackground);
+}
+
+.answer {
+  display: none;
+}
+
+.showItem {
+  display: block;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out; 
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-out; 
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.show-btn:active, .submitBtn:active, .edit-flashcard:active, .delete-flashcard:active {
+  transform: scale(0.98); 
+}
